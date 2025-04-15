@@ -105,6 +105,14 @@ body {
   background-color: var(--dark-blue-main);
 }
 
+.nav-col-2 ul li {
+  transition: transform 0.5s ease;
+}
+
+.nav-col-2 ul li:hover {
+  transform: translateY(-10px);
+}
+
 /* NAVBAR */
 .nav-container {
   display: flex;
@@ -130,6 +138,14 @@ body {
 .nav-col-2 ul {
   display: flex;
   gap: 10px;
+}
+
+.nav-col-2 ul li {
+  transition: transform 0.5s ease;
+}
+
+.nav-col-2 ul li:hover {
+  transform: translateY(-10px);
 }
 
 /*Header*/
@@ -186,7 +202,6 @@ body {
 .header-sub {
   padding: 1rem 2rem;
 }
-
 .btn-primary {
   margin: 2rem 0 0 0;
   padding: 0.9rem 4rem;
@@ -200,8 +215,19 @@ body {
   );
   color: white;
   font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
+.btn-primary:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 113, 212, 1) 0%,
+    rgba(69, 178, 222, 1) 100%
+  );
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+}
 .btn-container {
   display: flex;
   justify-content: center;
@@ -252,8 +278,12 @@ body {
 .outline-text {
   color: var(--cyan-cta);
   border-bottom: 2px solid var(--cyan-cta);
+  transition: scale 1s ease;
 }
 
+.outline-text:hover {
+  scale: 1.1;
+}
 .outline-container {
   display: flex;
 }
@@ -335,11 +365,23 @@ body {
   padding: 1rem;
   border-radius: 50px;
   border: none;
+  transition: all 0.5s ease;
+}
+.card-btn-container button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 113, 212, 1) 0%,
+    rgba(69, 178, 222, 1) 100%
+  );
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
 }
 #email {
   width: 100%;
   padding: 1rem 1rem;
   border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
 }
 
 #email:focus {
@@ -535,6 +577,27 @@ body {
     border: none;
   }
 
+  .feature-sub-container {
+    transition: transform 0.5s ease;
+  }
+  .feature-sub-container:hover {
+    transform: translateY(-10px) rotateZ(1deg);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .testimonial-sub-container:hover {
+    scale: 1.1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-container {
+    transition: scale 0.5s ease;
+  }
+
+  .card-container:hover {
+    scale: 1.1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
   .footer-container {
     display: flex;
     flex-direction: row;
@@ -614,7 +677,13 @@ body {
     max-width: 70%;
   }
 
-  button {
-    font-size: 1.5rem;
+  .card-btn-container button {
+    margin-bottom: 0;
+  }
+
+  .card-col-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
