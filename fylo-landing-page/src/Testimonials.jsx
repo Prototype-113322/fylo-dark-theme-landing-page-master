@@ -62,6 +62,25 @@ function Testimonials() {
             </div>
           </div>
         </section>
+        {/* <!-- Testimonial 4 --> */}
+        <section className="testimonial-sub-container">
+          <div className="testimonial-col-1">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+          </div>
+          <div className="testimonial-col-2">
+            <div className="user-profile-container">
+              <img src="./profile-4.webp" />
+            </div>
+            <div className="user-name">
+              <h4>Hatsune Miku</h4>
+              <p>Vocaloid</p>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );
